@@ -9,6 +9,11 @@ function init() {
         classicsData = classic;
         displayClassic(classicsData.classic);
     });
+
+    $.getJSON('json/cart.json', function(cart) { 
+        cartData = cart;
+        displayCart(cartData.cart);
+    });
 }
 
 function displayClassic(classic) {
@@ -31,6 +36,28 @@ function getclassicItemHTML(classic) {
                     <hr>
                     <p>${classic.description}</p>
                 </div>
+            </div>`;
+}
+
+function displayCart(cart) {
+    let htmlString = '';
+    $.each(cart, function(i, cart) {
+        htmlString = htmlString + getcartItemHTML(cart);  
+    });
+
+    cartItemEl.html(htmlString);
+    
+}
+
+function getcartItemHTML(cart) {
+    return `<div class="${cart.class}">
+                    <h6>${cart.title}</h6>
+                <div class="cart-sizes">
+                    <p>${cart.small}</p>
+                    <p>${cart.medium}</p>
+                    <p>${cart.large}</p>
+                </div>
+                    <h4>${cart.button}</h4>
             </div>`;
 }
 
