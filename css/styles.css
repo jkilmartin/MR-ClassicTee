@@ -1,0 +1,54 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #F6F6F7;
+  margin-top: 1em;
+  padding: 8px 5em 8px 5em;
+}
+
+header p {
+  text-align: right;
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.teedesign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5em;
+}
+
+.teedesign img {
+  padding-left: 5em;
+  height: 600px;
+}
+
+.teedesign .classic-text {
+  max-width: 35em;
+  padding-left: 8em;
+}
+
+.teedesign .classic-text h1, .teedesign .classic-text h6 {
+  color: #222;
+}
+
+.teedesign .classic-text h5 {
+  margin-bottom: 1em;
+}
+
+.teedesign .classic-text p {
+  font-size: 12px;
+  margin-top: 1em;
+  color: #888;
+}
+
+.teedesign .classic-text hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+/*# sourceMappingURL=styles.css.map */
