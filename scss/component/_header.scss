@@ -1,0 +1,13 @@
+header {
+    background-color: $header;
+    margin-top: 1em;
+    padding: 8px 5em 8px 5em;
+
+
+    p {
+        text-align: right;
+        color: $secondary-font;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+}
