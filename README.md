@@ -12,4 +12,4 @@ If I had more time I would first off
 * Mobile / Web View looks pretty good. However there is a 4th break point I'd need to implement to make it look better when going between 1000px and 800px or so.
 
 
-Created By Jack Kilmartin :)
+__Created By Jack Kilmartin :)__
