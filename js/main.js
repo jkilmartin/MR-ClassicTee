@@ -1,33 +1,43 @@
+// Global Var For Embed HTML
 let classicItemEl = $(".classicData"),
     cartItemEl = $(".cartData"),
     miniCartItemEl = $(".miniCart");
 
+// Global Var For Data
 let classicsData,
     cartData,
     miniCart;
 
+// Global Var Misc
+let sizeSelect,
+    popup;
+
+// initilize func
+
 function init() {
-    $.getJSON('json/classic.json', function(classic) { 
+    // gathers my two json documents to dynamically generate most of the code
+    $.getJSON('json/classic.json', function(classic) {
         classicsData = classic;
         displayClassic(classicsData.classic);
     });
 
-    $.getJSON('json/cart.json', function(cart) { 
+    $.getJSON('json/cart.json', function(cart) {
         cartData = cart;
         displayCart(cartData.cart);
     });
 
+    // this displays the small mini cart on the top right
     displayMiniCart()
 }
 
 function displayClassic(classic) {
     let htmlString = '';
     $.each(classic, function(i, classic) {
-        htmlString = htmlString + getclassicItemHTML(classic);  
+        htmlString = htmlString + getclassicItemHTML(classic);
     });
 
     classicItemEl.html(htmlString);
-    
+
 }
 
 function getclassicItemHTML(classic) {
@@ -43,29 +53,55 @@ function getclassicItemHTML(classic) {
 function displayCart(cart) {
     let htmlString = '';
     $.each(cart, function(i, cart) {
-        htmlString = htmlString + getcartItemHTML(cart);  
+        htmlString = htmlString + getcartItemHTML(cart);
     });
 
     cartItemEl.html(htmlString);
-    
+
+    hoverCartClass();
+    addToCart();
 }
 
 function getcartItemHTML(cart) {
     return `<div class="${cart.class}">
-                    <h6>${cart.title}<span class="req">*</span></h6>
-                <div class="cart-sizes">
-                    <p>${cart.small}</p>
-                    <p>${cart.medium}</p>
-                    <p>${cart.large}</p>
-                </div>
-                    <p class="btn">${cart.button}</p>
+                    <p>${cart.size}</p>
             </div>`;
 }
 
-function displayMiniCart() {
-    miniCartItemEl.on('click', function() {
-        console.log("hello");
-    });
+function hoverCartClass() {
+    sizeSelect = $('.cartstyles');
+    sizeSelect.on('click', function() {
+        // give the small black border around the shirt selection
+        if (sizeSelect.hasClass('selectedSize')) {
+            sizeSelect.removeClass('selectedSize');
+        }
+
+        $(this).addClass('selectedSize')
+    })
 }
 
+function addToCart() {
+    let cartButton = $('.btn');
+    cartButton.on('click', function() {
+        if (sizeSelect.hasClass('selectedSize')) {
+
+        } else {
+            window.alert("Please Select A Shirt Size!");
+        }
+    })
+}
+
+function displayMiniCart() {
+    popup = $('.parentpopup');
+    miniCartItemEl.on('click', function() {
+        if (popup.hasClass('selectpopup')) {
+            popup.removeClass('selectpopup');
+        } else(
+            $('.parentpopup').addClass('selectpopup')
+        )
+
+    })
+}
+
+// initilize function to run JS
 init();

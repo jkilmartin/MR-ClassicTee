@@ -1,12 +1,20 @@
 {
     "cart": [
         {
+            "id": 0,
             "class": "cartstyles",
-            "title": "SIZE",
-            "small": "S",
-            "medium": "M",
-            "large": "L",
-            "button": "ADD TO CART"
+            "size": "S"
+        },
+        {
+            
+            "id": 1,
+            "class": "cartstyles",
+            "size": "M"
+        },
+        {
+            "id": 2,
+            "class": "cartstyles",
+            "size": "L"
         }
     ]
 }
