@@ -1,8 +1,10 @@
 let classicItemEl = $(".classicData"),
-    cartItemEl = $(".cartData");
+    cartItemEl = $(".cartData"),
+    miniCartItemEl = $(".miniCart");
 
 let classicsData,
-    cartData;
+    cartData,
+    miniCart;
 
 function init() {
     $.getJSON('json/classic.json', function(classic) { 
@@ -14,6 +16,8 @@ function init() {
         cartData = cart;
         displayCart(cartData.cart);
     });
+
+    displayMiniCart()
 }
 
 function displayClassic(classic) {
@@ -27,15 +31,12 @@ function displayClassic(classic) {
 }
 
 function getclassicItemHTML(classic) {
-    return `<div data-id="${classic.id}" class="${classic.class}">
-                    <img src="${classic.image}">
-                <div class="classic-text">
+    return `<div data-id="${classic.id}" class="classic-text">
                     <h5>${classic.title}</h5>
                     <hr>
                     <h6>${classic.price}</h6>
                     <hr>
                     <p>${classic.description}</p>
-                </div>
             </div>`;
 }
 
@@ -51,14 +52,20 @@ function displayCart(cart) {
 
 function getcartItemHTML(cart) {
     return `<div class="${cart.class}">
-                    <h6>${cart.title}</h6>
+                    <h6>${cart.title}<span class="req">*</span></h6>
                 <div class="cart-sizes">
                     <p>${cart.small}</p>
                     <p>${cart.medium}</p>
                     <p>${cart.large}</p>
                 </div>
-                    <h4>${cart.button}</h4>
+                    <p class="btn">${cart.button}</p>
             </div>`;
+}
+
+function displayMiniCart() {
+    miniCartItemEl.on('click', function() {
+        console.log("hello");
+    });
 }
 
 init();
