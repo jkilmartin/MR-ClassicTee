@@ -16,38 +16,88 @@ header p {
   margin-bottom: 0;
 }
 
-.teedesign {
+.shirt-commerce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 5em;
 }
 
-.teedesign img {
+.shirt-commerce img {
   padding-left: 5em;
   height: 600px;
 }
 
-.teedesign .classic-text {
+.shirt-commerce .info-commerce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shirt-commerce .cartstyles .req {
+  color: #c90000;
+}
+
+.shirt-commerce .cartstyles p {
+  font-size: 12px;
+  margin: 5px 5px 5px 0px;
+}
+
+.shirt-commerce .cartstyles h6 {
+  font-size: 12px;
+  color: #888;
+}
+
+.shirt-commerce .cartstyles .btn {
+  border: 2px solid #222;
+  color: #222;
+  padding: 8px 20px 8px 20px;
+  margin-top: 1em;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.shirt-commerce .cartstyles .btn:hover {
+  background-color: #222;
+  color: #ccc;
+}
+
+.shirt-commerce .cartstyles .cart-sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shirt-commerce .cartstyles .cart-sizes p {
+  border: 1px solid #ccc;
+  padding: 8px 14px 8px 14px;
+  color: #ccc;
+}
+
+.shirt-commerce .classic-text, .shirt-commerce .cartData {
   max-width: 35em;
   padding-left: 8em;
 }
 
-.teedesign .classic-text h1, .teedesign .classic-text h6 {
+.shirt-commerce .classic-text h1, .shirt-commerce .classic-text h6 {
   color: #222;
 }
 
-.teedesign .classic-text h5 {
+.shirt-commerce .classic-text h5 {
   margin-bottom: 1em;
 }
 
-.teedesign .classic-text p {
+.shirt-commerce .classic-text p {
   font-size: 12px;
   margin-top: 1em;
   color: #888;
 }
 
-.teedesign .classic-text hr {
+.shirt-commerce .classic-text hr {
   margin-top: 4px;
   margin-bottom: 4px;
 }

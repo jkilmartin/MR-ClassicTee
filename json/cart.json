@@ -1,0 +1,12 @@
+{
+    "cart": [
+        {
+            "class": "cartstyles",
+            "title": "SIZE",
+            "small": "S",
+            "medium": "M",
+            "large": "L",
+            "button": "ADD TO CART"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-.teedesign {
+.shirt-commerce {
     display: flex;
     padding-top: 5em;
 
@@ -7,10 +7,66 @@
         height: 600px;
     }
 
-    .classic-text {
+    .info-commerce {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cartstyles { 
+        .req {
+            color: $req-star;
+        }
+        p {
+            font-size: 12px;
+            margin: 5px 5px 5px 0px;
+        
+        }
+
+        h6 {
+            font-size: 12px;
+            color: $secondary-font;
+        }
+        
+        .btn {
+            border: 2px solid $drk-clr;
+            color: $drk-clr;
+            padding: 8px 20px 8px 20px;
+            margin-top: 1em;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .btn:hover {
+            background-color: $drk-clr;
+            color: $bor-lgt;
+        }
+        .cart-sizes {
+            display: flex;
+
+            p {
+                border: 1px solid $bor-lgt;
+                padding: 8px 14px 8px 14px;
+                color: $bor-lgt;
+                
+            }
+
+            
+
+       
+
+           
+
+        }
+ 
+    }
+
+
+    .classic-text, .cartData {
         max-width: 35em;
         padding-left: 8em;
+    }
 
+    .classic-text {
         h1, h6 {
             color: $drk-clr;
         }
