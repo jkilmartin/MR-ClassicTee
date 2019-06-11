@@ -1,0 +1,52 @@
+@media only screen and (max-width: 1075px) {
+    .shirt-commerce {
+        .classic-text,
+        .cartData,
+        .sizeReq,
+        .shopbutton {
+            max-width: 25em;
+            padding-left: 3em;
+        }
+        .cartData {
+            padding-left: 48px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .shirt-commerce {
+        flex-direction: column;
+        img {
+            width: 480px;
+        }
+        .classic-text,
+        .cartData,
+        .sizeReq,
+        .shopbutton {
+            max-width: 25em;
+            padding-left: 3em;
+        }
+        .cartData {
+            padding-left: 48px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .shirt-commerce {
+        padding-top: 2em;
+        img {
+            padding: 0px 15px 15px 15px;
+            height: 600px;
+        }
+        .classic-text,
+        .cartData,
+        .sizeReq,
+        .shopbutton {
+            padding-left: 0;
+        }
+        .cartData {
+            padding-left: 15px;
+        }
+    }
+}
